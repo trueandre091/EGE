@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50320bb9-e912-4b51-bb3b-44ebb217e8ce" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/ЕГКР-21-12-24/Task-5-19237.py" afterDir="false" />
+    <list default="true" id="50320bb9-e912-4b51-bb3b-44ebb217e8ce" name="Changes" comment="пятое задание 😍">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ЕГКР-21-12-24/Task-5-19237.py" beforeDir="false" afterPath="$PROJECT_DIR$/ЕГКР-21-12-24/Task-5-19237.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +48,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.Task-5-19237.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "settings.editor.selected.configurable": "preferences.lookFeel"
@@ -77,11 +78,20 @@
       <option name="project" value="LOCAL" />
       <updated>1735050640031</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="пятое задание 😍">
+      <option name="closed" value="true" />
+      <created>1735051326019</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735051326019</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="пятое задание " />
+    <option name="LAST_COMMIT_MESSAGE" value="пятое задание " />
   </component>
 </project>
