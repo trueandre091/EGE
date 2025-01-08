@@ -1,5 +1,44 @@
 ## Шпоргалки
 
+### #13
+```python
+from ipaddress import *
+```
+
+1. Определить адрес сети
+```python
+net = ip_network("IP/MASK", 0)
+print(net)
+```
+
+2. Наиб / Наим кол-во 0 / 1 в bin записи маски подсети
+```python
+for mask in range(33):
+    net = ip_network(f"IP/{mask}", 0)
+    print(net, net.netmask)
+    # 1.1.1.1/1 255.255.255.255
+```
+
+3. Определить сколько ip в сети
+```python
+net = ip_network('IP/MASK', 0)
+c = 0
+for ip in net:
+    if CON in f'{ip:b}':
+        c += 1
+
+print(c)
+```
+
+4. Два узла в одной сети
+```python
+for mask in range(33):
+    net1 = ip_network(f"IP1/{mask}", 0)
+    net2 = ip_network(f"IP2/{mask}", 0)
+    if net1 == net2:
+        print(net1.netmask)
+```
+
 ### #19-21
 
 Одна куча:
@@ -51,15 +90,17 @@ print(f(START, R) * f(R, END)) # R - числа, которые должны б�
 ### Общее 
 Полезные функции:
 
-- from sympy: factorint
-- from re: 
-  - .match(pattern, str) \
-    .split(pattern, str) \
-    .findall(pattern, str) \
+- from sympy:
+  - divisors - все делители числа (с 1 и самим числом)
+  - factorint - разложение на простые делители (без 1 и самого числа)
+- from re:
+  - .match(pattern, str)
+  - .split(pattern, str)
+  - .findall(pattern, str)
     ```
     re.findall(r'\bf[a-z]*', 'which foot or hand fell fastest')
     >>> ['foot', 'fell', 'fastest']
     re.findall(r'(\w+)=(\d+)', 'set width=20 and height=10')
     >>> [('width', '20'), ('height', '10')]
     ```
-    .search(pattern, str)
+  - .search(pattern, str)
