@@ -1,5 +1,43 @@
 ## Шпоргалки
 
+### #2
+```python
+from itertools import product, permutations
+
+def f(x, y, z, w):
+    return (x or (not y)) and (not (x == z)) and w
+
+
+for a1, a2, a3, a4 in product([0, 1], repeat=4):
+    # repeat и кол-во переменных = количеству неизвестных ячеек
+    table = [(a1, 0, 0, 1), (0, 0, 1, 1), (0, a2, a3, a4)]  # заполняем уникальными переменными
+    if len(set(table)) == len(table):
+        for p in permutations("xyzw"):
+            u = [f(**dict(zip(p, t))) for t in table] == [1, 1, 1]
+            # для каждой строчки проверяем фукнцию и сравниваем с результатов ф из условия
+            if u:
+                print(*p)
+```
+
+### #1
+```python
+from itertools import permutations
+
+graph = "GF FE ED DA AG BG BA BC CB CD".split() 
+# все возможные соединения (можно повторяться)
+mat = "26 147 456 236 37 134 25".split()        
+# номера заполненных столбцов каждой строки из условия (строго по таблице)
+
+print(*range(1, 8))
+
+for i in permutations("ABCDEFG"):
+    # перебираем все возможные пары: номер пункта (индекс) - буква
+    if all(str(i.index(x) + 1) in mat[i.index(y)] for x, y in graph):
+    # проверяем по каждому соединению, что их индексы есть в матрице соединений
+    # нужно чтобы совпали все
+        print(*i)
+```
+
 ### #13
 ```python
 from ipaddress import *
