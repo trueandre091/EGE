@@ -2,7 +2,7 @@ with open("26-4938.txt") as f:
     N, L = map(int, f.readline().split())
     data = [list(map(int, l.split())) for l in f]
 
-data = sorted(data, key=lambda x: (x[1], -x[0]))
+data = sorted(data, key=lambda x: x[1])
 
 res = [data[0]]
 for met in data:
