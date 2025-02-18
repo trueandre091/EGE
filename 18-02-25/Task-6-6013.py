@@ -24,5 +24,5 @@ for x in range(-40, 40):
 
 done()
 
-#42
+# 42
 
