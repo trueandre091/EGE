@@ -6,7 +6,7 @@ def f(x):
     A = A1 <= x <= A2
     return (A and (not Q)) <= (P or Q)
 
-line = [i / 5 for i in range(23 * 5, 130 * 5)]
+line = [i + e for i in range(23, 130) for e in (0, 0.1, 0.9)]
 ans = []
 
 for A1, A2 in combinations(line, 2):
