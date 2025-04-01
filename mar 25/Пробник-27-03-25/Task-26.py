@@ -26,10 +26,3 @@ for z in data[1:]:
 print(len(ans))
 print(sum([i[2] for i in ans]))
 
-# 12740
-# 10598
-
-
-
-
-
