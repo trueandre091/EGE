@@ -28,7 +28,7 @@ for st_i, en_i in s:
         continue
 
 print(max(avail))
-print(eval(data[4536355:4536433]))
+print(data[4536355:4536433])
 
 
 
