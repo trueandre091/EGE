@@ -16,7 +16,7 @@ with open("26_9793.txt") as f:
 
 # types: 0 - шлифовка; 1 - окрашивание
 
-transp = [[]] * N
+transp = [{}] * N
 last = 0
 
 while data:
@@ -49,3 +49,4 @@ while data:
 
 print(last)
 print(transp.index(last))
+
