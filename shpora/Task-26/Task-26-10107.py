@@ -7,10 +7,9 @@ ans = [data[0]]
 for event in data.copy():
     if event[0] >= ans[-1][1]:
         ans.append(event)
-        data.remove(event)
 
-
-print(len(ans), ans[-1][0] - ans[-2][1])
+ans.pop()
+print(len(ans) + 1, max(data)[0] - ans[-1][1])
 
 
 

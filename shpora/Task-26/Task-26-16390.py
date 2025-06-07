@@ -9,8 +9,6 @@ for a in data.copy():
         ans.append(a)
         S -= a
         data.remove(a)
-
-
 S += ans.pop()
 data = sorted(data, reverse=True)
 for a in data:

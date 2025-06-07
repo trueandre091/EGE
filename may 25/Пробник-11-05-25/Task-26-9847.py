@@ -3,23 +3,11 @@ with open("26_9847.txt") as f:
     data = [tuple(map(int, i.split())) for i in f]
 
 data = sorted(data, key=lambda x: (x[0], x[1]))
-
-data = [
-    (10, 50),
-    (100, 150),
-    (110, 155),
-    (120, 160),
-    (130, 170),
-    (151, 170)
-]
-
 timeline = [0] * 1441
 
 for time in range(1441):
     gs = [g for g in data if g[0] <= time <= g[1]]
     timeline[time] = len(gs)
-
-print(timeline)
 
 s = []
 maxx = max(timeline)
