@@ -4,12 +4,10 @@ with open("24-input.txt") as f:
 data = data.replace("FSRQ", "*")
 data = data.split("*")
 
-max_s = ""
+max_s = 0
 for i in range(len(data)):
-    s = data[i:i+81]
-    summ = sum([len(i) for i in s]) + 4 * (len(s) - 1)
-    if summ > len(max_s):
-        max_s = "FSRQ".join(s)
+    s = "FSRQ".join(data[i:i+81])
+    max_s = max(len(s), max_s)
 
-print(len(max_s) + 6)
+print(max_s + 6)
 # 2379

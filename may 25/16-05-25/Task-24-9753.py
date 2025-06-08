@@ -9,4 +9,3 @@ for i in range(len(data) - 150):
     ans.append(len(s))
 
 print(max(ans))
-

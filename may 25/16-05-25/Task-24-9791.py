@@ -9,14 +9,6 @@ ans = 0
 
 for i in data:
     s = i.lstrip("0")
-    if int(s, 16) % 20 == 0:
-        ans = max(ans, len(s))
-    else:
-        for st in range(len(s)):
-            for en in range(st + 1, len(s) + 1)[::-1]:
-                ss = s[st:en]
-                if int(ss, 16) % 20 == 0:
-                    ans = max(ans, len(ss))
-                    break
+    ans = max(len(s), ans)
 
 print(ans)
